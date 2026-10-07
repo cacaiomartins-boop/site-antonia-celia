@@ -1,0 +1,9 @@
+FOTOS DAS TELAS
+Coloque aqui as fotos das obras (JPG, lado maior ~1600px). O nome do arquivo e o "id" da obra
+em src/data/clinic.ts. Ex.: cerrado.jpg, fluir.jpg, dialogo.jpg ...
+Sem o arquivo, o site mostra uma tela pintada provisoria.
+
+Outras fotos:
+- public/img/antonia.jpg           retrato dela (pagina Quem sou)
+- public/img/ambientes/<id>.jpg    telas nas casas (ids: sala-sofa, sala-jantar, corredor, living-arquiteta)
+- public/img/og.jpg                imagem de compartilhamento (1200x630)

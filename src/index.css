@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gesso: #ffffff;
+  --tinta: #16130f;
+  --vermelhao: #c42a1d;
+  --oliva: #5a6a2b;
+  --azul: #12308f;
+  --beringela: #3a1a4a;
+  --ouro: #c9a24b;
+}
+
+html { background: var(--gesso); }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+body {
+  margin: 0;
+  background: var(--gesso);
+  color: var(--tinta);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .display { font-family: "Syne", system-ui, sans-serif; letter-spacing: -0.03em; line-height: 0.95; }
+
+::selection { background: var(--vermelhao); color: var(--gesso); }
+
+a, button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+
+.palavra { display: inline-block; opacity: 0.16; transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .palavra { opacity: 1 !important; }
+  * { animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+.sem-scroll::-webkit-scrollbar { display: none; }
+.sem-scroll { scrollbar-width: none; }
