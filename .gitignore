@@ -1,3 +1,7 @@
 node_modules
 dist
 .vercel
+.dev-data
+.env
+.env.*
+!.env.example

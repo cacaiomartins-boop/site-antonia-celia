@@ -5,7 +5,7 @@ import Quadro from "../components/Quadro";
 import { TLink } from "../components/Transicao";
 import { obras, paginas } from "../data/clinic";
 
-const destaques = ["ultimo-trabalho", "cerrado", "dialogo", "ceu-de-estrelas", "fluir", "livre-expressao", "luz-da-lua"]
+const destaques = ["caminhos-iv", "tons-beringela", "cerrado", "ser-feliz-sim", "dialogo", "brincadeira-de-crianca", "luz-da-lua"]
   .map((id) => obras.find((o) => o.id === id)!)
   .filter(Boolean);
 

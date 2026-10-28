@@ -5,7 +5,7 @@ export default {
     extend: {
       fontWeight: { extrabold: "700" },
       colors: {
-        gesso: "#FFFFFF",
+        gesso: "#F7F4EC",
         tinta: "#16130F",
         vermelhao: "#C42A1D",
         oliva: "#5A6A2B",

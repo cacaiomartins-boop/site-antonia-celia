@@ -107,6 +107,20 @@ export default function QuemSou() {
       </section>
       )}
 
+      <section className="mx-auto max-w-[1400px] px-5 pt-24 md:px-9" aria-labelledby="crit">
+        <h2 id="crit" className="m-0 text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold">O que dizem sobre as telas</h2>
+        <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
+          {textos.criticas.map((c) => (
+            <figure key={c.autor} className="m-0 border-l-4 pl-6 md:pl-8" style={{ borderColor: cor }}>
+              <blockquote className="m-0 space-y-5 font-serif text-[clamp(1.1rem,1.5vw,1.4rem)] leading-[1.5]">
+                {c.texto.map((t) => <p key={t} className="m-0">{t}</p>)}
+              </blockquote>
+              <figcaption className="mt-6 text-base italic text-tinta/70">{c.autor}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-[1400px] px-5 py-24 md:px-9" aria-labelledby="rec">
         <h2 id="rec" className="m-0 text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold">Reconhecimentos</h2>
         <ul className="m-0 mt-8 list-none divide-y divide-tinta/25 border-y border-tinta/25 p-0">

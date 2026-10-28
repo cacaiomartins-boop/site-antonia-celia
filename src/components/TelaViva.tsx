@@ -99,7 +99,7 @@ export default function TelaViva() {
   };
 
   return (
-    <section ref={secao} className="relative h-[100svh] min-h-[540px] overflow-hidden bg-white" style={{ touchAction: "pan-y", cursor: cursorPincel(cor) }}>
+    <section ref={secao} className="relative h-[100svh] min-h-[540px] overflow-hidden bg-gesso" style={{ touchAction: "pan-y", cursor: cursorPincel(cor) }}>
       <canvas ref={canvas} className="absolute inset-0 h-full w-full" aria-hidden />
 
       <div className="pointer-events-none absolute inset-x-0 top-[38%] -translate-y-1/2 px-5 text-center">

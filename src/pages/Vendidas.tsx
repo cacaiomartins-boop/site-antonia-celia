@@ -5,11 +5,13 @@ import Quadro from "../components/Quadro";
 import Sala from "../components/Sala";
 import { TLink } from "../components/Transicao";
 import { Obra, obras, paginas, textos } from "../data/clinic";
+import { estadoDe, useLoja } from "../lib/loja";
 
 const cor = paginas[3].cor;
 
 export default function Vendidas() {
-  const vendidas = obras.filter((o) => o.status === "vendida");
+  const { loja } = useLoja();
+  const vendidas = obras.filter((o) => estadoDe(o, loja) === "vendida");
   const [aberta, setAberta] = useState<Obra | null>(null);
   const faixa = useRef<HTMLDivElement>(null);
   const secao = useRef<HTMLElement>(null);
@@ -49,7 +51,7 @@ export default function Vendidas() {
           <h2 id="corredor" className="m-0 text-[clamp(2.4rem,6vw,5.5rem)] font-extrabold">
             {vendidas.length} telas já têm parede
           </h2>
-          <p className="m-0 max-w-sm text-lg italic">Arraste para o lado. Clique em uma tela para vê-la no tamanho real.</p>
+          <p className="m-0 max-w-sm text-lg italic">Arraste para o lado. Clique em uma tela para vê-la ampliada.</p>
         </div>
         <div ref={faixa} className="sem-scroll mt-12 flex gap-10 overflow-x-auto px-5 pb-10 md:gap-16 md:px-9" data-cursor="arrastar" data-lenis-prevent-wheel style={{ cursor: "grab" }}>
           {vendidas.map((o) => (
@@ -71,7 +73,7 @@ export default function Vendidas() {
           </div>
         </div>
       </section>
-      {aberta && <Sala obra={aberta} fechar={() => setAberta(null)} />}
+      {aberta && <Sala obra={aberta} loja={loja} fechar={() => setAberta(null)} />}
     </>
   );
 }

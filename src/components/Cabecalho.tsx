@@ -8,7 +8,7 @@ export default function Cabecalho() {
   const { pathname } = useLocation();
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-[70] flex items-start justify-between border-b border-tinta/10 bg-white px-5 py-4 text-tinta md:px-9 md:py-5">
+      <header className="fixed inset-x-0 top-0 z-[70] flex items-start justify-between border-b border-tinta/10 bg-gesso px-5 py-4 text-tinta md:px-9 md:py-5">
         <TLink to="/" className="display text-lg font-extrabold leading-none md:text-xl" onNavigate={() => setAberto(false)}>
           {artista.nome}
         </TLink>

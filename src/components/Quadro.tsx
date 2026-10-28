@@ -8,13 +8,14 @@ type Props = {
   className?: string;
   onClick?: () => void;
   selo?: boolean; // carimbo "vendida"
+  rotulo?: string; // etiqueta fixa, ex.: "Reservada"
   inclinar?: boolean;
   altura?: string; // ex.: "62vh" (largura sai da proporção)
   legenda?: boolean;
 };
 
 // Uma tela pendurada: foto real se existir, tela provisória se não.
-export default function Quadro({ obra, className = "", onClick, selo, inclinar = true, altura, legenda = true }: Props) {
+export default function Quadro({ obra, className = "", onClick, selo, rotulo, inclinar = true, altura, legenda = true }: Props) {
   const [proporcao, setProporcao] = useState(obra.dim[1] / obra.dim[0]); // largura / altura (provisório até a foto carregar)
   const [foto, setFoto] = useState(true);
   const ref = useRef<HTMLDivElement>(null);
@@ -62,7 +63,7 @@ export default function Quadro({ obra, className = "", onClick, selo, inclinar =
           {foto && (
             <img
               src={`/img/obras/${obra.id}.jpg`}
-              alt={`${obra.titulo}, ${obra.tecnica.toLowerCase()}, ${obra.ano}`}
+              alt={[obra.titulo, obra.tecnica?.toLowerCase(), obra.ano].filter(Boolean).join(", ")}
               loading="lazy"
               draggable={false}
               className="block h-full w-full object-cover"
@@ -72,6 +73,11 @@ export default function Quadro({ obra, className = "", onClick, selo, inclinar =
               }}
               onError={() => setFoto(false)}
             />
+          )}
+          {rotulo && (
+            <span className="absolute left-0 top-4 bg-tinta px-3 py-1 font-display text-[11px] font-bold uppercase tracking-[0.12em] text-gesso">
+              {rotulo}
+            </span>
           )}
           {selo && (
             <span
@@ -86,7 +92,7 @@ export default function Quadro({ obra, className = "", onClick, selo, inclinar =
       {legenda && (
         <figcaption className="mt-3 flex flex-wrap items-baseline justify-between gap-x-4 text-[0.95rem] leading-snug">
           <span className="font-display text-base font-bold tracking-tight">{obra.titulo}</span>
-          <span className="text-tinta/65">{obra.ano}</span>
+          <span className="text-tinta/65">{obra.ano ?? ""}</span>
         </figcaption>
       )}
     </figure>

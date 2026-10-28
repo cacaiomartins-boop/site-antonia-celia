@@ -17,7 +17,7 @@ export default function ExpoMapa({ lista, ativo, cor }: { lista: Exposicao[]; at
   const p = pts[ativo];
   const direita = p.x > 600;
   return (
-    <svg viewBox="296 26 452 276" className="h-full w-full" role="img" aria-label={`Mapa das exposições. Em destaque: ${e.titulo}, ${e.cidade}, ${e.ano}.`}>
+    <svg viewBox="270 18 478 306" className="h-full w-full" role="img" aria-label={`Mapa das exposições. Em destaque: ${e.titulo}, ${e.cidade}, ${e.ano}.`}>
       <defs><clipPath id="recorte"><rect width={MUNDO_W} height={MUNDO_H} /></clipPath></defs>
       <path d={MUNDO_PATH} fill="#16130F" fillOpacity="0.13" clipPath="url(#recorte)" />
       {[-120, -60, 0, 60, 120].map((l) => (
@@ -44,8 +44,8 @@ export default function ExpoMapa({ lista, ativo, cor }: { lista: Exposicao[]; at
         <animate attributeName="opacity" from=".8" to="0" dur="1.6s" repeatCount="indefinite" />
       </circle>
       <g transform={`translate(${p.x + (direita ? -9 : 9)} ${p.y - 8})`} textAnchor={direita ? "end" : "start"}>
-        <text fontFamily="Syne, sans-serif" fontWeight="800" fontSize="15" fill="#16130F" stroke="#FFFFFF" strokeWidth="3.5" paintOrder="stroke">{e.cidade.split(",")[0]}</text>
-        <text y="13" fontFamily="Newsreader, serif" fontStyle="italic" fontSize="11" fill="#16130F" stroke="#FFFFFF" strokeWidth="3" paintOrder="stroke">{e.ano}</text>
+        <text fontFamily="Syne, sans-serif" fontWeight="800" fontSize="15" fill="#16130F" stroke="#F7F4EC" strokeWidth="3.5" paintOrder="stroke">{e.cidade.split(",")[0]}</text>
+        <text y="13" fontFamily="Newsreader, serif" fontStyle="italic" fontSize="11" fill="#16130F" stroke="#F7F4EC" strokeWidth="3" paintOrder="stroke">{e.ano}</text>
       </g>
     </svg>
   );
