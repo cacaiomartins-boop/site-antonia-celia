@@ -11,9 +11,8 @@ export const artista = {
   funcao: "Artista plástica",
   cidade: "Brasília",
   instagram: "antoniaceliabarros",
-  // TODO: confirmar com a neta o WhatsApp real (somente números, com 55 + DDD)
-  whatsapp: "5561999999999",
-  whatsappConfirmado: false,
+  whatsapp: "5561999849850", // 55 + DDD + número
+  whatsappConfirmado: true,
   retrato: "/img/antonia.jpg", // foto dela (opcional; sem arquivo aparece uma moldura pintada)
 };
 
@@ -464,22 +463,6 @@ export const ambientes = [
   { id: "corredor", legenda: "Verde-oliva no corredor", cor: O },
   { id: "living-arquiteta", legenda: "Living da arquiteta Rachel Fechina", cor: A },
 ];
-
-// ---------------------------------------------------------------
-// RESERVA DE OBRA (sinal por Pix)
-// Os mesmos números são usados pelo site e pelo servidor (pasta api/).
-// ---------------------------------------------------------------
-export const reserva = {
-  sinal: 200, // reais, valor fixo
-  dias: 7, // quanto tempo a obra fica reservada depois do pagamento
-  minutosParaPagar: 30, // tempo para pagar o Pix antes de a obra ser liberada
-  condicoes: [
-    "O sinal de R$ 200 garante a tela por 7 dias e é abatido do valor final.",
-    "Depois do pagamento, a Antônia (ou quem ela indicar) entra em contato para combinar valor final, entrega e instalação.",
-    "Se o negócio não for fechado, o sinal é devolvido. Podem ser descontadas as tarifas do meio de pagamento.",
-    "Passados 7 dias sem acordo, a tela volta a ficar disponível para outras pessoas.",
-  ],
-};
 
 export const links = {
   instagram: `https://instagram.com/${artista.instagram}`,

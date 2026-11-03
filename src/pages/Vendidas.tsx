@@ -5,13 +5,11 @@ import Quadro from "../components/Quadro";
 import Sala from "../components/Sala";
 import { TLink } from "../components/Transicao";
 import { Obra, obras, paginas, textos } from "../data/clinic";
-import { estadoDe, useLoja } from "../lib/loja";
 
 const cor = paginas[3].cor;
 
 export default function Vendidas() {
-  const { loja } = useLoja();
-  const vendidas = obras.filter((o) => estadoDe(o, loja) === "vendida");
+  const vendidas = obras.filter((o) => o.status === "vendida");
   const [aberta, setAberta] = useState<Obra | null>(null);
   const faixa = useRef<HTMLDivElement>(null);
   const secao = useRef<HTMLElement>(null);
@@ -73,7 +71,7 @@ export default function Vendidas() {
           </div>
         </div>
       </section>
-      {aberta && <Sala obra={aberta} loja={loja} fechar={() => setAberta(null)} />}
+      {aberta && <Sala obra={aberta} fechar={() => setAberta(null)} />}
     </>
   );
 }

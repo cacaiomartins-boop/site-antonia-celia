@@ -3,8 +3,6 @@ import PaginaTopo from "../components/PaginaTopo";
 import Quadro from "../components/Quadro";
 import Sala from "../components/Sala";
 import { Obra, medidaTexto, obras, paginas } from "../data/clinic";
-import { estadoDe, useLoja } from "../lib/loja";
-import { RetornoReserva } from "../components/Reserva";
 
 const cor = paginas[2].cor;
 // primeiro valor em reais da linha de preço (ex.: "R$ 5.600,00 cada · ..." vira 5600)
@@ -26,16 +24,10 @@ const filtros: { id: string; nome: string; ok: (o: Obra) => boolean }[] = [
 
 export default function Disponiveis() {
   const [f, setF] = useState("todas");
-  const { loja, atualizar } = useLoja();
   const [ordem, setOrdem] = useState("padrao");
   const [aberta, setAberta] = useState<Obra | null>(null);
-  // volta da página de pagamento: o endereço traz ?reserva=...&t=...
-  const [retorno, setRetorno] = useState(() => {
-    const p = new URLSearchParams(window.location.search);
-    return p.get("reserva") && p.get("t") ? { id: p.get("reserva")!, token: p.get("t")! } : null;
-  });
   const cmp = ordens.find((x) => x.id === ordem)!.cmp;
-  const lista = obras.filter((o) => ["disponivel", "reservada"].includes(estadoDe(o, loja))).filter(filtros.find((x) => x.id === f)!.ok);
+  const lista = obras.filter((o) => o.status === "disponivel").filter(filtros.find((x) => x.id === f)!.ok);
   if (cmp) lista.sort(cmp);
   return (
     <>
@@ -74,7 +66,7 @@ export default function Disponiveis() {
         <ul className="m-0 mt-14 list-none columns-2 gap-x-5 p-0 sm:gap-x-12 lg:columns-3">
           {lista.map((o) => (
             <li key={o.id} className="mb-10 break-inside-avoid md:mb-14">
-              <Quadro obra={o} rotulo={estadoDe(o, loja) === "reservada" ? "Reservada" : undefined} onClick={() => setAberta(o)} />
+              <Quadro obra={o} onClick={() => setAberta(o)} />
               <p className="m-0 mt-1 text-[0.85rem] italic leading-snug text-tinta/65 md:text-[0.95rem]">
                 {[o.tecnica, medidaTexto(o.dim)].filter(Boolean).join(" · ")}
               </p>
@@ -84,14 +76,7 @@ export default function Disponiveis() {
         </ul>
         {lista.length === 0 && <p className="mt-10 text-xl italic">Nenhuma tela neste filtro. Tente outro.</p>}
       </section>
-      {aberta && <Sala obra={aberta} loja={loja} fechar={() => setAberta(null)} />}
-      {retorno && (
-        <RetornoReserva
-          id={retorno.id}
-          token={retorno.token}
-          fechar={() => { window.history.replaceState(null, "", window.location.pathname); setRetorno(null); atualizar(); }}
-        />
-      )}
+      {aberta && <Sala obra={aberta} fechar={() => setAberta(null)} />}
     </>
   );
 }

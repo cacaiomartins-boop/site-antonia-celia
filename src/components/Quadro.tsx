@@ -8,14 +8,13 @@ type Props = {
   className?: string;
   onClick?: () => void;
   selo?: boolean; // carimbo "vendida"
-  rotulo?: string; // etiqueta fixa, ex.: "Reservada"
   inclinar?: boolean;
   altura?: string; // ex.: "62vh" (largura sai da proporção)
   legenda?: boolean;
 };
 
 // Uma tela pendurada: foto real se existir, tela provisória se não.
-export default function Quadro({ obra, className = "", onClick, selo, rotulo, inclinar = true, altura, legenda = true }: Props) {
+export default function Quadro({ obra, className = "", onClick, selo, inclinar = true, altura, legenda = true }: Props) {
   const [proporcao, setProporcao] = useState(obra.dim[1] / obra.dim[0]); // largura / altura (provisório até a foto carregar)
   const [foto, setFoto] = useState(true);
   const ref = useRef<HTMLDivElement>(null);
@@ -73,11 +72,6 @@ export default function Quadro({ obra, className = "", onClick, selo, rotulo, in
               }}
               onError={() => setFoto(false)}
             />
-          )}
-          {rotulo && (
-            <span className="absolute left-0 top-4 bg-tinta px-3 py-1 font-display text-[11px] font-bold uppercase tracking-[0.12em] text-gesso">
-              {rotulo}
-            </span>
           )}
           {selo && (
             <span
