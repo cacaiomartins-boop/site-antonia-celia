@@ -13,6 +13,7 @@ export const artista = {
   instagram: "antoniaceliabarros",
   whatsapp: "5561999849850", // 55 + DDD + número
   whatsappConfirmado: true,
+  email: "antonia_celia@hotmail.com", // do catálogo impresso; confirmar com a artista
   retrato: "/img/antonia.jpg", // foto dela (opcional; sem arquivo aparece uma moldura pintada)
 };
 
@@ -76,7 +77,7 @@ export const textos = {
     "A Antonia também pinta sob encomenda: ela vê o espaço, conversa sobre as cores e as medidas e faz uma tela só para aquela parede.",
   passos: [
     { titulo: "Escolha ou descreva", texto: "Veja as telas disponíveis ou conte o que imagina para o seu espaço." },
-    { titulo: "Converse com ela", texto: "O contato é direto, pelo WhatsApp. Sem carrinho e sem intermediário." },
+    { titulo: "Converse com ela", texto: "O contato é direto, pelo WhatsApp ou por e-mail. Sem carrinho e sem intermediário." },
     { titulo: "Receba em casa", texto: "Combinam valor, entrega e instalação, tudo em conversa." },
   ],
 };
@@ -468,6 +469,8 @@ export const links = {
   instagram: `https://instagram.com/${artista.instagram}`,
   whatsapp: (msg?: string) =>
     `https://wa.me/${artista.whatsapp}${msg ? `?text=${encodeURIComponent(msg)}` : ""}`,
+  email: (assunto: string, corpo: string) =>
+    `mailto:${artista.email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`,
 };
 
 export const medidaTexto = (d: [number, number]) =>

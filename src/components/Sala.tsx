@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Obra, links, medidaTexto } from "../data/clinic";
+import { TLink } from "./Transicao";
 import { telaProvisoria } from "../lib/placeholder";
 import { parar, seguir } from "../lib/scroll";
 
@@ -16,6 +17,7 @@ export default function Sala({ obra, fechar }: { obra: Obra; fechar: () => void 
     return () => { window.removeEventListener("keydown", esc); seguir(); };
   }, [fechar]);
 
+  const msgReserva = `Olá, Antônia! Quero reservar a tela "${obra.titulo}" (${medidaTexto(obra.dim)}${obra.preco ? `, ${obra.preco}` : ""}). Como combinamos o sinal?`;
   const msg = `Olá, Antônia! Vi a tela "${obra.titulo}" (${medidaTexto(obra.dim)}${obra.preco ? `, ${obra.preco}` : ""}) no seu site e gostaria de saber mais.`;
 
   return (
@@ -63,13 +65,22 @@ export default function Sala({ obra, fechar }: { obra: Obra; fechar: () => void 
               {obra.status === "vendida" ? (
                 <p className="mt-8 text-lg">Esta tela já encontrou casa. A Antônia pode pintar outra parecida para o seu espaço.</p>
               ) : (
-                <div className="mt-8">
-                  <a href={links.whatsapp(msg)} target="_blank" rel="noreferrer" className="display inline-block bg-ouro px-6 py-4 text-base font-bold text-tinta">
-                    Quero saber mais sobre esta tela
+                <div className="mt-8 flex flex-wrap items-center gap-3">
+                  <a href={links.whatsapp(msgReserva)} target="_blank" rel="noreferrer" className="display bg-ouro px-6 py-4 text-base font-bold text-tinta">
+                    Reservar
+                  </a>
+                  <a href={links.whatsapp(msg)} target="_blank" rel="noreferrer" className="display border-2 border-gesso/60 px-6 py-3.5 text-base font-bold">
+                    Tirar uma dúvida
                   </a>
                 </div>
               )}
-              <p className="mt-4 text-sm text-gesso/60">A conversa é direta com a artista, pelo WhatsApp. Entrega e instalação são combinadas ali.</p>
+              {obra.status !== "vendida" && (
+                <p className="mt-4 text-sm text-gesso/60">
+                  Para reservar, a conversa é direta com a artista: ela combina o sinal, o valor final, a entrega e a instalação.
+                  Sem WhatsApp ou de outro país?{" "}
+                  <TLink to={`/contato?obra=${obra.id}`} className="underline underline-offset-4">Escreva por e-mail</TLink>.
+                </p>
+              )}
           </>
         </div>
       </div>
