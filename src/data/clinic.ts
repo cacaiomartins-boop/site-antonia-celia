@@ -378,6 +378,7 @@ export type Obra = {
   paleta: [string, string, string];
   preco?: string;
   diptico?: boolean;
+  semMedida?: boolean; // medida ainda não informada: "dim" guarda só a proporção da foto
   detalhe?: string;
 };
 
@@ -389,7 +390,7 @@ export const obras: Obra[] = [
   // ---- À venda, com preço (WhatsApp, 20/10/2026) ----
   { id: "caminhos-iv", titulo: "Caminhos IV", dim: [120, 220], status: "disponivel", paleta: [O, G, W], preco: "R$ 18.500,00" },
   { id: "faz-de-conta", titulo: "Faz de conta", dim: [70, 100], status: "disponivel", paleta: [V, G, O], preco: "R$ 4.900,00" },
-  { id: "imaginar", titulo: "Imaginar", dim: [100, 80], status: "disponivel", paleta: [A, W, G], preco: "R$ 5.600,00", detalhe: "Faz par com Olhar e Caminhar. Pintada numa fase em que a artista começava a abstrair." },
+  { id: "imaginar", titulo: "Imaginar", dim: [100, 80], status: "disponivel", paleta: [A, W, G], preco: "R$ 5.600,00", detalhe: "Faz par com Olhar e Caminhar." },
   { id: "caminhar", titulo: "Caminhar", dim: [100, 80], status: "disponivel", paleta: [O, W, G], preco: "R$ 5.600,00", detalhe: "Faz par com Olhar e Imaginar." },
   { id: "olhar", titulo: "Olhar", dim: [100, 80], status: "disponivel", paleta: [V, W, B], preco: "R$ 5.600,00", detalhe: "Faz par com Caminhar e Imaginar." },
   { id: "acalanto", titulo: "Acalanto", dim: [90, 120], status: "disponivel", paleta: [A, W, B], preco: "R$ 3.800,00 cada · R$ 7.600,00 os dois", diptico: true, detalhe: "Díptico: cada tela tem 90 × 60 cm." },
@@ -426,12 +427,8 @@ export const obras: Obra[] = [
   // ---- Aguardando a artista confirmar (vendida ou acervo). Escondidas do site por enquanto. ----
   { id: "fluir", titulo: "Fluir", tecnica: ACR, dim: [69, 187], ano: 2026, status: "aguardando", paleta: [A, W, G] },
   { id: "o-tempo-2026", titulo: "O tempo", tecnica: ACR, dim: [187, 68], ano: 2026, status: "aguardando", paleta: [O, W, G] },
-  { id: "memorias", titulo: "Memórias", tecnica: ACR, dim: [120, 100], ano: 2026, status: "aguardando", paleta: [G, B, W] },
-  { id: "vestigios", titulo: "Vestígios", tecnica: ACR, dim: [100, 120], ano: 2026, status: "aguardando", paleta: [O, G, W] },
   { id: "sobre-sustentabilidade", titulo: "Sobre sustentabilidade", tecnica: ACR, dim: [80, 80], ano: 2026, status: "aguardando", paleta: [O, A, W] },
   { id: "linguagem-urbana", titulo: "Linguagem urbana", tecnica: ACR, dim: [160, 100], ano: 2026, status: "aguardando", paleta: [B, V, W] },
-  { id: "ceu-de-estrelas", titulo: "Céu de Estrelas", tecnica: ACR, dim: [130, 220], ano: 2025, status: "aguardando", paleta: [A, B, W] },
-  { id: "livre-expressao", titulo: "Livre Expressão", tecnica: ACR, dim: [135, 230], ano: 2025, status: "aguardando", paleta: [V, O, G] },
   // Enviadas em 13/10/2026, sem preço ainda
   { id: "quando-o-sol-vem", titulo: "Quando o sol vem", tecnica: "Mista sobre tela", dim: [90, 145], status: "aguardando", paleta: [G, O, W] },
   { id: "natureza-morta-ii", titulo: "Natureza morta II", tecnica: OLEO, dim: [46, 38], status: "aguardando", paleta: [G, B, W], detalhe: "Da primeira fase, antes de pintar de modo abstrato." },
@@ -440,21 +437,39 @@ export const obras: Obra[] = [
   { id: "libertacao", titulo: "Libertação", tecnica: "Mista", dim: [80, 90], status: "aguardando", paleta: [A, B, W], detalhe: "Da segunda fase, quando começou a abstrair." },
   { id: "maternidade", titulo: "Maternidade", tecnica: "Mista", dim: [80, 90], status: "aguardando", paleta: [V, G, W], detalhe: "Da segunda fase, quando começou a abstrair." },
 
-  // ---- Vendidas (provisório, vindo do Instagram; a artista vai mandar a lista oficial) ----
-  { id: "poliptico-unir", titulo: "Unir (políptico)", tecnica: ACR, dim: [100, 160], ano: 2024, status: "vendida", paleta: [A, G, W] },
-  { id: "poliptico-amor", titulo: "Amor (políptico)", tecnica: ACR, dim: [100, 160], ano: 2024, status: "vendida", paleta: [V, G, W] },
-  { id: "poliptico-pensador", titulo: "Pensador (políptico)", tecnica: ACR, dim: [100, 160], ano: 2024, status: "vendida", paleta: [B, G, W] },
-  { id: "poliptico-imaginacao", titulo: "Imaginação (políptico)", tecnica: ACR, dim: [100, 160], ano: 2024, status: "vendida", paleta: [O, G, W] },
-  { id: "tela-100x160", titulo: "Tela de 2023", tecnica: ACR, dim: [100, 160], ano: 2023, status: "vendida", paleta: [W, G, B], detalhe: "Marcada como vendida no Instagram da artista." },
-  { id: "amar", titulo: "Amar", tecnica: ACR, dim: [90, 200], ano: 2022, status: "vendida", paleta: [V, B, W] },
-  { id: "o-tempo-na-memoria", titulo: "Sustentabilidade, o tempo na memória", tecnica: "Mista com colagem", dim: [83, 83], ano: 2022, status: "vendida", paleta: [G, O, W] },
-  { id: "azul-da-cor-do-mar", titulo: "Azul da cor do mar I e II", tecnica: ACR, dim: [120, 100], ano: 2020, status: "vendida", paleta: [A, W, A] },
+  // ---- Vendidas ----
+  // ---- Vendidas, com foto (enviadas pela artista em 10/11/2026). Sem "semMedida", a medida veio da artista. ----
+  { id: "alem-do-horizonte", titulo: "Além do Horizonte", dim: [100, 117], status: "vendida", paleta: [O, V, G], semMedida: true },
+  { id: "vestigios", titulo: "Vestígios", tecnica: ACR, dim: [100, 120], ano: 2026, status: "vendida", paleta: [W, A, G] },
+  { id: "belo", titulo: "Belo", dim: [100, 168], status: "vendida", paleta: [W, G, W], semMedida: true },
+  { id: "o-tempo", titulo: "O tempo", dim: [100, 191], status: "vendida", paleta: [B, G, V], semMedida: true },
+  { id: "memorias", titulo: "Memórias", tecnica: ACR, dim: [100, 120], ano: 2026, status: "vendida", paleta: [A, W, G] },
+  { id: "um-azul-tao-profundo", titulo: "Um azul tão profundo que hipnotiza", dim: [100, 172], status: "vendida", paleta: [A, A, G], semMedida: true },
+  { id: "sem-titulo", titulo: "Sem título", dim: [100, 164], status: "vendida", paleta: [G, W, O], semMedida: true, detalhe: "Dois trípticos, vistos instalados." },
+  { id: "ceu-de-estrelas", titulo: "Céu de estrelas", tecnica: ACR, dim: [130, 220], ano: 2025, status: "vendida", paleta: [A, W, A] },
+  { id: "livre-expressao", titulo: "Livre expressão", tecnica: ACR, dim: [135, 230], ano: 2025, status: "vendida", paleta: [A, V, G] },
+  { id: "sem-titulo-2", titulo: "Sem título", dim: [100, 178], status: "vendida", paleta: [B, G, V], semMedida: true },
+  { id: "amar", titulo: "Amar", tecnica: ACR, dim: [200, 90], ano: 2022, status: "vendida", paleta: [V, B, W] },
+  { id: "azul-da-cor-do-mar", titulo: "Azul da cor do mar", tecnica: ACR, dim: [120, 100], ano: 2020, status: "vendida", paleta: [A, W, A] },
+  { id: "memorias-diptico", titulo: "Memórias", dim: [100, 175], status: "vendida", paleta: [W, G, B], semMedida: true, diptico: true },
+  { id: "caminho-ii", titulo: "Caminho II", dim: [100, 100], status: "vendida", paleta: [O, W, V], semMedida: true },
   { id: "agua", titulo: "Água", tecnica: "Mista sobre tela", dim: [110, 135], ano: 2020, status: "vendida", paleta: [A, O, W] },
+  { id: "sem-titulo-3", titulo: "Sem título", dim: [100, 116], status: "vendida", paleta: [A, B, W], semMedida: true },
   { id: "silencio-e-luz", titulo: "Silêncio e luz", tecnica: ACR, dim: [130, 220], ano: 2019, status: "vendida", paleta: [W, G, O] },
-  { id: "fundo-do-mar", titulo: "Fundo do Mar", tecnica: ACR, dim: [110, 220], ano: 2019, status: "vendida", paleta: [A, B, O] },
+  { id: "sem-titulo-4", titulo: "Sem título", dim: [100, 78], status: "vendida", paleta: [B, W, G], semMedida: true },
+  { id: "e-melhor-ser-alegre-i", titulo: "É melhor ser alegre I", dim: [100, 98], status: "vendida", paleta: [B, G, O], semMedida: true },
+  { id: "e-melhor-ser-alegre-ii", titulo: "É melhor ser alegre II", dim: [100, 99], status: "vendida", paleta: [O, B, A], semMedida: true },
+  { id: "memorias-iv", titulo: "Memórias IV", dim: [100, 41], status: "vendida", paleta: [W, G, B], semMedida: true },
+  { id: "sentimento", titulo: "Sentimento", dim: [100, 152], status: "vendida", paleta: [V, G, O], semMedida: true },
+  { id: "sem-titulo-5", titulo: "Sem título", dim: [100, 176], status: "vendida", paleta: [V, W, G], semMedida: true, diptico: true },
+  { id: "sem-titulo-6", titulo: "Sem título", dim: [100, 170], status: "vendida", paleta: [G, O, W], semMedida: true },
+  { id: "invente-novos-caminhos", titulo: "Invente novos caminhos", dim: [100, 100], status: "vendida", paleta: [W, O, A], semMedida: true },
+  { id: "luz-do-sol", titulo: "Luz do Sol", tecnica: ACR, dim: [130, 220], ano: 2016, status: "vendida", paleta: [G, V, W] },
   { id: "profeta", titulo: "Profeta", tecnica: ACR, dim: [120, 150], ano: 2019, status: "vendida", paleta: [B, G, W] },
-  { id: "mandacaru", titulo: "Mandacaru", tecnica: ACR, dim: [320, 140], ano: 2015, status: "vendida", paleta: [O, V, G] },
-  { id: "luz-do-sol", titulo: "Luz do Sol", tecnica: ACR, dim: [220, 130], ano: 2016, status: "vendida", paleta: [G, V, W] },
+  { id: "esquecer", titulo: "Esquecer", dim: [100, 98], status: "vendida", paleta: [O, G, W], semMedida: true },
+  { id: "sem-titulo-7", titulo: "Sem título", dim: [100, 101], status: "vendida", paleta: [A, B, W], semMedida: true },
+  { id: "mandacaru", titulo: "Mandacaru", tecnica: ACR, dim: [140, 320], ano: 2015, status: "vendida", paleta: [O, V, G] },
+  { id: "sem-titulo-8", titulo: "Sem título", dim: [100, 75], status: "vendida", paleta: [W, B, G], semMedida: true },
 ];
 
 // Fotos de telas nos ambientes dos clientes (Instagram: "especialmente para esta sala")

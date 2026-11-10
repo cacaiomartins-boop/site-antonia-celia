@@ -30,7 +30,7 @@ function Corredor() {
       <div ref={trilho} className="flex flex-col gap-8 px-5 md:flex-row md:items-center md:gap-20 md:px-9">
         <div className="shrink-0 md:w-[34vw] md:pr-10">
           <h2 id="corredor-titulo" className="m-0 text-[clamp(2.6rem,6vw,5.5rem)] font-extrabold">
-            Telas recentes
+            Telas
           </h2>
           <p className="mt-4 max-w-sm text-lg italic"><span className="md:hidden">Deslize para o lado.</span><span className="max-md:hidden">Role para caminhar pelo corredor.</span> Cada tela tem a medida real escrita na legenda.</p>
         </div>

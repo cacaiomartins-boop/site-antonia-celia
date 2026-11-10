@@ -56,7 +56,7 @@ export default function Sala({ obra, fechar }: { obra: Obra; fechar: () => void 
               <h2 className="m-0 text-[clamp(2.2rem,4.4vw,4rem)] font-extrabold">{obra.titulo}</h2>
               <dl className="m-0 mt-6 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-lg">
                 {obra.tecnica && <><dt className="text-gesso/60">Técnica</dt><dd className="m-0">{obra.tecnica}</dd></>}
-                <dt className="text-gesso/60">Medida</dt><dd className="m-0">{medidaTexto(obra.dim)}</dd>
+                {!obra.semMedida && <><dt className="text-gesso/60">Medida</dt><dd className="m-0">{medidaTexto(obra.dim)}</dd></>}
                 {obra.ano && <><dt className="text-gesso/60">Ano</dt><dd className="m-0">{obra.ano}</dd></>}
                 {obra.preco && <><dt className="text-gesso/60">Valor</dt><dd className="m-0 font-bold">{obra.preco}</dd></>}
               </dl>

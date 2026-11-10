@@ -59,6 +59,25 @@ export default function Exposicoes() {
         </ol>
       </section>
 
+      <section className="mx-auto max-w-[1400px] px-5 pb-28 md:px-9" aria-labelledby="video">
+        <div className="grid items-center gap-10 border-t-[3px] border-tinta pt-14 md:grid-cols-[1fr_auto] md:gap-16">
+          <div>
+            <h2 id="video" className="m-0 text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold">A natureza na arte</h2>
+            <p className="mt-4 max-w-xl text-xl italic text-tinta/80">Um passeio em vídeo por uma das mostras em que as telas da Antônia foram expostas.</p>
+          </div>
+          <video
+            controls
+            playsInline
+            preload="none"
+            poster="/video/a-natureza-na-arte.jpg"
+            className="block aspect-[9/16] w-full max-w-[340px] justify-self-start bg-tinta md:justify-self-end"
+            aria-label="Vídeo: A natureza na arte, passeio por uma mostra com telas da Antônia Célia"
+          >
+            <source src="/video/a-natureza-na-arte.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-[1400px] px-5 pb-28 md:px-9" aria-labelledby="curriculo">
         <h2 id="curriculo" className="m-0 text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold">Currículo completo</h2>
         <p className="mt-4 max-w-xl text-lg italic text-tinta/70">Exposições de 1993 a 2013, conforme o catálogo da artista.</p>

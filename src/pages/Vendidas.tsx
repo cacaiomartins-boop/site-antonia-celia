@@ -4,28 +4,14 @@ import PaginaTopo from "../components/PaginaTopo";
 import Quadro from "../components/Quadro";
 import Sala from "../components/Sala";
 import { TLink } from "../components/Transicao";
-import { Obra, obras, paginas, textos } from "../data/clinic";
+import { Obra, medidaTexto, obras, paginas, textos } from "../data/clinic";
 
 const cor = paginas[3].cor;
 
 export default function Vendidas() {
   const vendidas = obras.filter((o) => o.status === "vendida");
   const [aberta, setAberta] = useState<Obra | null>(null);
-  const faixa = useRef<HTMLDivElement>(null);
   const secao = useRef<HTMLElement>(null);
-
-  // arrastar o corredor com o mouse
-  useLayoutEffect(() => {
-    const el = faixa.current!;
-    let down = false, x0 = 0, s0 = 0, moveu = false;
-    const d = (e: PointerEvent) => { if (e.pointerType !== "mouse") return; down = true; moveu = false; x0 = e.clientX; s0 = el.scrollLeft; };
-    const m = (e: PointerEvent) => { if (!down) return; if (Math.abs(e.clientX - x0) > 4) moveu = true; el.scrollLeft = s0 - (e.clientX - x0); };
-    const u = () => { down = false; };
-    const clique = (e: MouseEvent) => { if (moveu) { e.stopPropagation(); e.preventDefault(); moveu = false; } };
-    el.addEventListener("pointerdown", d); window.addEventListener("pointermove", m); window.addEventListener("pointerup", u);
-    el.addEventListener("click", clique, true);
-    return () => { el.removeEventListener("pointerdown", d); window.removeEventListener("pointermove", m); window.removeEventListener("pointerup", u); el.removeEventListener("click", clique, true); };
-  }, []);
 
   // carimbos "vendida" batem na tela quando entram na vista
   useLayoutEffect(() => {
@@ -44,20 +30,23 @@ export default function Vendidas() {
   return (
     <>
       <PaginaTopo titulo="Vendidas" frase={paginas[3].frase} cor={cor} imagem={paginas[3].img} />
-      <section ref={secao} className="py-16 md:py-24" aria-labelledby="corredor">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-6 px-5 md:flex-row md:items-end md:justify-between md:px-9">
+      <section ref={secao} className="mx-auto max-w-[1400px] px-5 py-16 md:px-9 md:py-24" aria-labelledby="corredor">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <h2 id="corredor" className="m-0 text-[clamp(2.4rem,6vw,5.5rem)] font-extrabold">
-            {vendidas.length} telas já têm parede
+            Telas que já têm parede
           </h2>
-          <p className="m-0 max-w-sm text-lg italic">Arraste para o lado. Clique em uma tela para vê-la ampliada.</p>
+          <p className="m-0 max-w-sm text-lg italic">Clique em uma tela para vê-la ampliada.</p>
         </div>
-        <div ref={faixa} className="sem-scroll mt-12 flex gap-10 overflow-x-auto px-5 pb-10 md:gap-16 md:px-9" data-cursor="arrastar" data-lenis-prevent-wheel style={{ cursor: "grab" }}>
+        <ul className="m-0 mt-14 list-none columns-2 gap-x-5 p-0 sm:gap-x-12 lg:columns-3">
           {vendidas.map((o) => (
-            <div key={o.id} className="shrink-0 self-end">
-              <Quadro obra={o} selo altura="clamp(240px,46svh,520px)" onClick={() => setAberta(o)} />
-            </div>
+            <li key={o.id} className="mb-10 break-inside-avoid md:mb-14">
+              <Quadro obra={o} selo onClick={() => setAberta(o)} />
+              <p className="m-0 mt-1 text-[0.85rem] italic leading-snug text-tinta/65 md:text-[0.95rem]">
+                {[o.tecnica, !o.semMedida && medidaTexto(o.dim)].filter(Boolean).join(" · ")}
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="bg-tinta px-5 py-24 text-gesso md:px-9 md:py-32">
