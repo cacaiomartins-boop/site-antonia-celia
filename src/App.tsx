@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { iniciarScroll, ScrollTrigger } from "./lib/scroll";
 import { TransicaoProvider } from "./components/Transicao";
+import Abertura from "./components/Abertura";
 import Cabecalho from "./components/Cabecalho";
 import Rodape from "./components/Rodape";
 import Home from "./pages/Home";
@@ -26,6 +27,7 @@ export default function App() {
 
   return (
     <TransicaoProvider>
+      <Abertura />
       <Cabecalho />
       <main>
         <Suspense fallback={<div className="min-h-[300svh]" />}>
