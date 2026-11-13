@@ -11,6 +11,7 @@ const Exposicoes = lazy(() => import("./pages/Exposicoes"));
 const Disponiveis = lazy(() => import("./pages/Disponiveis"));
 const Vendidas = lazy(() => import("./pages/Vendidas"));
 const Contato = lazy(() => import("./pages/Contato"));
+const Admin = lazy(() => import("./pages/Admin"));
 import NaoEncontrada from "./pages/NaoEncontrada";
 import { aplicarSeo } from "./seo/head";
 
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/disponiveis" element={<Disponiveis />} />
           <Route path="/vendidas" element={<Vendidas />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NaoEncontrada />} />
         </Routes>
         </Suspense>

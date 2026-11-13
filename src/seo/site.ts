@@ -41,4 +41,6 @@ export const seoPaginas: SeoPagina[] = [
 
 export const seoNaoEncontrada = { titulo: "Página não encontrada · Antônia Célia", descricao: "Esta página não existe. Volte ao início do site de Antônia Célia, artista plástica de Brasília." };
 
+export const seoPainel = { titulo: "Painel · Antônia Célia" };
+
 export const urlDe = (rota: string) => (rota === "/" ? `${SITE}/` : `${SITE}${rota}`);

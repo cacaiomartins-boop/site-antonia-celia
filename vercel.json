@@ -5,7 +5,8 @@
     { "source": "/exposicoes", "destination": "/exposicoes/index.html" },
     { "source": "/disponiveis", "destination": "/disponiveis/index.html" },
     { "source": "/vendidas", "destination": "/vendidas/index.html" },
-    { "source": "/contato", "destination": "/contato/index.html" }
+    { "source": "/contato", "destination": "/contato/index.html" },
+    { "source": "/admin", "destination": "/admin/index.html" }
   ],
   "headers": [
     {

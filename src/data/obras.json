@@ -1,0 +1,727 @@
+[
+  {
+    "id": "caminhos-iv",
+    "titulo": "Caminhos IV",
+    "dim": [120, 220],
+    "status": "disponivel",
+    "preco": "R$ 18.500,00",
+    "paleta": ["#5A6A2B", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1600, "h": 857, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "faz-de-conta",
+    "titulo": "Faz de conta",
+    "dim": [70, 100],
+    "status": "disponivel",
+    "preco": "R$ 4.900,00",
+    "paleta": ["#C42A1D", "#C9A24B", "#5A6A2B"],
+    "foto": { "w": 1520, "h": 1016, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "imaginar",
+    "titulo": "Imaginar",
+    "dim": [100, 80],
+    "status": "disponivel",
+    "preco": "R$ 5.600,00",
+    "detalhe": "Faz par com Olhar e Caminhar.",
+    "paleta": ["#12308F", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 1302, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "caminhar",
+    "titulo": "Caminhar",
+    "dim": [100, 80],
+    "status": "disponivel",
+    "preco": "R$ 5.600,00",
+    "detalhe": "Faz par com Olhar e Imaginar.",
+    "paleta": ["#5A6A2B", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 1292, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "olhar",
+    "titulo": "Olhar",
+    "dim": [100, 80],
+    "status": "disponivel",
+    "preco": "R$ 5.600,00",
+    "detalhe": "Faz par com Caminhar e Imaginar.",
+    "paleta": ["#C42A1D", "#F7F4EC", "#3A1A4A"],
+    "foto": { "w": 1290, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "acalanto",
+    "titulo": "Acalanto",
+    "dim": [90, 120],
+    "status": "disponivel",
+    "preco": "R$ 3.800,00 cada · R$ 7.600,00 os dois",
+    "diptico": true,
+    "detalhe": "Díptico: cada tela tem 90 × 60 cm.",
+    "paleta": ["#12308F", "#F7F4EC", "#3A1A4A"],
+    "foto": { "w": 1600, "h": 1127, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "encanto",
+    "titulo": "Encanto",
+    "dim": [100, 100],
+    "status": "disponivel",
+    "preco": "R$ 7.000,00",
+    "paleta": ["#C42A1D", "#3A1A4A", "#C9A24B"],
+    "foto": { "w": 1504, "h": 1502, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "cerrado",
+    "titulo": "Cerrado",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [120, 210],
+    "status": "disponivel",
+    "preco": "R$ 17.700,00",
+    "paleta": ["#5A6A2B", "#C42A1D", "#C9A24B"],
+    "foto": { "w": 1600, "h": 895, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "poesia",
+    "titulo": "Poesia",
+    "tecnica": "Mista sobre tela",
+    "ano": 2026,
+    "dim": [100, 200],
+    "status": "disponivel",
+    "preco": "R$ 14.000,00",
+    "paleta": ["#F7F4EC", "#C9A24B", "#3A1A4A"],
+    "foto": { "w": 1600, "h": 794, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "dialogo",
+    "titulo": "Diálogo I",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [100, 140],
+    "status": "disponivel",
+    "preco": "R$ 9.800,00",
+    "detalhe": "O Diálogo II já foi vendido.",
+    "paleta": ["#C42A1D", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 1046, "h": 760, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "sentimento-de-paz",
+    "titulo": "Sentimento de Paz",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [100, 160],
+    "status": "disponivel",
+    "preco": "R$ 5.600,00 cada · R$ 11.200,00 o díptico",
+    "diptico": true,
+    "detalhe": "Díptico de 100 × 160 cm: cada tela tem 100 × 80 cm.",
+    "paleta": ["#12308F", "#F7F4EC", "#5A6A2B"],
+    "foto": { "w": 1600, "h": 986, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "ser-feliz-sim",
+    "titulo": "Ser feliz sim",
+    "dim": [180, 220],
+    "status": "disponivel",
+    "preco": "R$ 27.700,00",
+    "paleta": ["#C42A1D", "#C9A24B", "#5A6A2B"],
+    "foto": { "w": 1600, "h": 1292, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "vida",
+    "titulo": "Vida",
+    "dim": [120, 100],
+    "status": "disponivel",
+    "preco": "R$ 8.400,00",
+    "paleta": ["#5A6A2B", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1351, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "pipa",
+    "titulo": "Pipa",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [120, 100],
+    "status": "disponivel",
+    "preco": "R$ 8.400,00",
+    "paleta": ["#C42A1D", "#12308F", "#C9A24B"],
+    "foto": { "w": 1334, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "melhores-lembrancas",
+    "titulo": "Melhores lembranças I e II",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [100, 180],
+    "status": "disponivel",
+    "preco": "R$ 12.600,00",
+    "diptico": true,
+    "paleta": ["#C42A1D", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1600, "h": 865, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "luz-da-lua",
+    "titulo": "Luz da Lua I",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [160, 100],
+    "status": "disponivel",
+    "preco": "R$ 11.200,00",
+    "paleta": ["#3A1A4A", "#12308F", "#C9A24B"],
+    "foto": { "w": 1286, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "tons-beringela",
+    "titulo": "Tons beringela",
+    "dim": [130, 280],
+    "status": "disponivel",
+    "preco": "R$ 25.500,00",
+    "paleta": ["#3A1A4A", "#C42A1D", "#F7F4EC"],
+    "foto": { "w": 1600, "h": 743, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "liberdade",
+    "titulo": "Liberdade I e II",
+    "dim": [120, 220],
+    "status": "disponivel",
+    "preco": "R$ 9.200,00 cada · R$ 18.400,00 o díptico",
+    "diptico": true,
+    "detalhe": "Díptico de 120 × 220 cm: cada tela tem 120 × 110 cm.",
+    "paleta": ["#12308F", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 1514, "h": 700, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "brincadeira-de-crianca",
+    "titulo": "Brincadeira de criança",
+    "dim": [130, 220],
+    "status": "disponivel",
+    "preco": "R$ 20.000,00",
+    "paleta": ["#C42A1D", "#C9A24B", "#12308F"],
+    "foto": { "w": 1600, "h": 937, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "posso-sonhar",
+    "titulo": "Posso sonhar",
+    "dim": [120, 180],
+    "status": "disponivel",
+    "preco": "R$ 15.000,00",
+    "paleta": ["#12308F", "#3A1A4A", "#F7F4EC"],
+    "foto": { "w": 1518, "h": 1006, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "natureza-plena",
+    "titulo": "Natureza Plena",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2022,
+    "dim": [120, 200],
+    "status": "disponivel",
+    "preco": "R$ 16.800,00",
+    "paleta": ["#5A6A2B", "#12308F", "#C9A24B"],
+    "foto": { "w": 1524, "h": 966, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "semear-amor",
+    "titulo": "Semear amor",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2020,
+    "dim": [130, 150],
+    "status": "disponivel",
+    "preco": "R$ 13.600,00",
+    "paleta": ["#C42A1D", "#C9A24B", "#5A6A2B"],
+    "foto": { "w": 1378, "h": 1198, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "encontro",
+    "titulo": "Encontro",
+    "dim": [157, 90],
+    "status": "disponivel",
+    "preco": "R$ 9.800,00",
+    "paleta": ["#C9A24B", "#3A1A4A", "#F7F4EC"],
+    "foto": { "w": 734, "h": 1266, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "flores-pelo-caminho",
+    "titulo": "Flores pelo caminho",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2019,
+    "dim": [130, 220],
+    "status": "disponivel",
+    "preco": "R$ 20.000,00",
+    "paleta": ["#C42A1D", "#5A6A2B", "#F7F4EC"],
+    "foto": { "w": 1600, "h": 942, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "caminhando",
+    "titulo": "Caminhando",
+    "dim": [110, 210],
+    "status": "disponivel",
+    "preco": "R$ 16.200,00",
+    "paleta": ["#5A6A2B", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1494, "h": 677, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "lembrando",
+    "titulo": "Lembrando",
+    "dim": [130, 150],
+    "status": "disponivel",
+    "preco": "R$ 13.600,00",
+    "paleta": ["#3A1A4A", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1504, "h": 1469, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "sabia-canta-ii-iv",
+    "titulo": "O sabiá canta II e IV",
+    "dim": [100, 140],
+    "status": "disponivel",
+    "preco": "R$ 4.900,00 o díptico",
+    "diptico": true,
+    "detalhe": "Díptico da série O sabiá canta: cada tela tem 70 × 100 cm.",
+    "paleta": ["#5A6A2B", "#C42A1D", "#C9A24B"],
+    "foto": { "w": 865, "h": 602, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "sinfonia-das-cores",
+    "titulo": "Sinfonia das cores",
+    "dim": [130, 150],
+    "status": "disponivel",
+    "preco": "R$ 13.600,00",
+    "paleta": ["#C42A1D", "#12308F", "#C9A24B"],
+    "foto": { "w": 773, "h": 740, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "ser",
+    "titulo": "Ser",
+    "dim": [175, 188],
+    "status": "disponivel",
+    "preco": "R$ 23.000,00",
+    "paleta": ["#3A1A4A", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1500, "h": 1403, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "comecar-de-novo",
+    "titulo": "Começar de novo",
+    "dim": [180, 120],
+    "status": "disponivel",
+    "preco": "R$ 15.120,00",
+    "paleta": ["#5A6A2B", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 600, "h": 970, "ext": "webp" }
+  },
+  {
+    "id": "alegria-da-alma",
+    "titulo": "Alegria da alma",
+    "dim": [120, 80],
+    "status": "disponivel",
+    "preco": "R$ 6.720,00",
+    "paleta": ["#C42A1D", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 776, "h": 1176, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "tons-do-cafe",
+    "titulo": "Tons do café",
+    "dim": [90, 100],
+    "status": "disponivel",
+    "preco": "R$ 6.300,00",
+    "paleta": ["#C9A24B", "#3A1A4A", "#5A6A2B"],
+    "foto": { "w": 787, "h": 715, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "cores-e-registros",
+    "titulo": "Cores e registros",
+    "dim": [80, 70],
+    "status": "disponivel",
+    "preco": "R$ 3.920,00",
+    "detalhe": "Da série Cores e registros. É o único que sobrou: os outros foram vendidos na Itália.",
+    "paleta": ["#12308F", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 834, "h": 1028, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "tons-claros-e-escuros",
+    "titulo": "Tons claros e escuros",
+    "dim": [160, 100],
+    "status": "disponivel",
+    "preco": "R$ 11.200,00",
+    "paleta": ["#F7F4EC", "#3A1A4A", "#C9A24B"],
+    "foto": { "w": 593, "h": 943, "ext": "webp" }
+  },
+  {
+    "id": "ir",
+    "titulo": "Ir I e II",
+    "dim": [120, 200],
+    "status": "disponivel",
+    "preco": "R$ 8.400,00 cada",
+    "diptico": true,
+    "detalhe": "Díptico de 120 × 200 cm: cada tela tem 100 × 120 cm, e o valor é de cada uma.",
+    "paleta": ["#12308F", "#C42A1D", "#F7F4EC"],
+    "foto": { "w": 1380, "h": 820, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "fluir",
+    "titulo": "Fluir",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [69, 187],
+    "status": "aguardando",
+    "paleta": ["#12308F", "#F7F4EC", "#C9A24B"]
+  },
+  {
+    "id": "o-tempo-2026",
+    "titulo": "O tempo",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [187, 68],
+    "status": "aguardando",
+    "paleta": ["#5A6A2B", "#F7F4EC", "#C9A24B"]
+  },
+  {
+    "id": "sobre-sustentabilidade",
+    "titulo": "Sobre sustentabilidade",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [80, 80],
+    "status": "aguardando",
+    "paleta": ["#5A6A2B", "#12308F", "#F7F4EC"]
+  },
+  {
+    "id": "linguagem-urbana",
+    "titulo": "Linguagem urbana",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [160, 100],
+    "status": "aguardando",
+    "paleta": ["#3A1A4A", "#C42A1D", "#F7F4EC"]
+  },
+  {
+    "id": "quando-o-sol-vem",
+    "titulo": "Quando o sol vem",
+    "tecnica": "Mista sobre tela",
+    "dim": [90, 145],
+    "status": "aguardando",
+    "paleta": ["#C9A24B", "#5A6A2B", "#F7F4EC"]
+  },
+  {
+    "id": "natureza-morta-ii",
+    "titulo": "Natureza morta II",
+    "tecnica": "Óleo sobre tela",
+    "dim": [46, 38],
+    "status": "aguardando",
+    "detalhe": "Da primeira fase, antes de pintar de modo abstrato.",
+    "paleta": ["#C9A24B", "#3A1A4A", "#F7F4EC"]
+  },
+  {
+    "id": "natureza-morta-i",
+    "titulo": "Natureza morta I",
+    "tecnica": "Óleo sobre tela",
+    "dim": [58, 70],
+    "status": "aguardando",
+    "detalhe": "Da primeira fase, antes de pintar de modo abstrato.",
+    "paleta": ["#C9A24B", "#3A1A4A", "#F7F4EC"]
+  },
+  {
+    "id": "flores-do-jardim",
+    "titulo": "Flores do jardim",
+    "tecnica": "Óleo sobre tela",
+    "dim": [80, 100],
+    "status": "aguardando",
+    "detalhe": "Da primeira fase, antes de pintar de modo abstrato.",
+    "paleta": ["#C42A1D", "#5A6A2B", "#F7F4EC"]
+  },
+  {
+    "id": "libertacao",
+    "titulo": "Libertação",
+    "tecnica": "Mista",
+    "dim": [80, 90],
+    "status": "aguardando",
+    "detalhe": "Da segunda fase, quando começou a abstrair.",
+    "paleta": ["#12308F", "#3A1A4A", "#F7F4EC"]
+  },
+  {
+    "id": "maternidade",
+    "titulo": "Maternidade",
+    "tecnica": "Mista",
+    "dim": [80, 90],
+    "status": "aguardando",
+    "detalhe": "Da segunda fase, quando começou a abstrair.",
+    "paleta": ["#C42A1D", "#C9A24B", "#F7F4EC"]
+  },
+  {
+    "id": "alem-do-horizonte",
+    "titulo": "Além do Horizonte",
+    "dim": [100, 117],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#5A6A2B", "#C42A1D", "#C9A24B"],
+    "foto": { "w": 858, "h": 734, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "vestigios",
+    "titulo": "Vestígios",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [100, 120],
+    "status": "vendida",
+    "paleta": ["#F7F4EC", "#12308F", "#C9A24B"],
+    "foto": { "w": 1440, "h": 1257, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "belo",
+    "titulo": "Belo",
+    "dim": [100, 168],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#F7F4EC", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 1280, "h": 762, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "o-tempo",
+    "titulo": "O tempo",
+    "dim": [100, 191],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#3A1A4A", "#C9A24B", "#C42A1D"],
+    "foto": { "w": 1140, "h": 597, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "memorias",
+    "titulo": "Memórias",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [100, 120],
+    "status": "vendida",
+    "paleta": ["#12308F", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 1440, "h": 1202, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "um-azul-tao-profundo",
+    "titulo": "Um azul tão profundo que hipnotiza",
+    "dim": [100, 172],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#12308F", "#12308F", "#C9A24B"],
+    "foto": { "w": 1440, "h": 836, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "serie-infinito",
+    "titulo": "Série Infinito",
+    "dim": [100, 164],
+    "semMedida": true,
+    "status": "vendida",
+    "detalhe": "Dois trípticos, vistos instalados.",
+    "paleta": ["#C9A24B", "#F7F4EC", "#5A6A2B"],
+    "foto": { "w": 1150, "h": 700, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "ceu-de-estrelas",
+    "titulo": "Céu de estrelas",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2025,
+    "dim": [130, 220],
+    "status": "vendida",
+    "paleta": ["#12308F", "#F7F4EC", "#12308F"],
+    "foto": { "w": 1391, "h": 794, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "livre-expressao",
+    "titulo": "Livre expressão",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2025,
+    "dim": [135, 230],
+    "status": "vendida",
+    "paleta": ["#12308F", "#C42A1D", "#C9A24B"],
+    "foto": { "w": 1138, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "tons-do-mar",
+    "titulo": "Tons do mar",
+    "dim": [100, 178],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#3A1A4A", "#C9A24B", "#C42A1D"],
+    "foto": { "w": 1440, "h": 808, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "amar",
+    "titulo": "Amar",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2022,
+    "dim": [200, 90],
+    "status": "vendida",
+    "paleta": ["#C42A1D", "#3A1A4A", "#F7F4EC"],
+    "foto": { "w": 694, "h": 1600, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "azul-da-cor-do-mar",
+    "titulo": "Azul da cor do mar",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2020,
+    "dim": [120, 100],
+    "status": "vendida",
+    "paleta": ["#12308F", "#F7F4EC", "#12308F"],
+    "foto": { "w": 1440, "h": 1559, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "memorias-diptico",
+    "titulo": "Memórias",
+    "dim": [100, 175],
+    "semMedida": true,
+    "status": "vendida",
+    "diptico": true,
+    "paleta": ["#F7F4EC", "#C9A24B", "#3A1A4A"],
+    "foto": { "w": 1500, "h": 860, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "caminho-ii",
+    "titulo": "Caminho II",
+    "dim": [100, 100],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#5A6A2B", "#F7F4EC", "#C42A1D"],
+    "foto": { "w": 1125, "h": 1125, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "agua",
+    "titulo": "Água",
+    "tecnica": "Mista sobre tela",
+    "ano": 2020,
+    "dim": [110, 135],
+    "status": "vendida",
+    "paleta": ["#12308F", "#5A6A2B", "#F7F4EC"],
+    "foto": { "w": 1440, "h": 1440, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "azul-da-cor-do-mar-2",
+    "titulo": "Azul da cor do mar",
+    "dim": [100, 116],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#12308F", "#3A1A4A", "#F7F4EC"],
+    "foto": { "w": 942, "h": 810, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "silencio-e-luz",
+    "titulo": "Silêncio e luz",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2019,
+    "dim": [130, 220],
+    "status": "vendida",
+    "paleta": ["#F7F4EC", "#C9A24B", "#5A6A2B"],
+    "foto": { "w": 1354, "h": 808, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "e-melhor-ser-alegre-i",
+    "titulo": "É melhor ser alegre I",
+    "dim": [100, 98],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#3A1A4A", "#C9A24B", "#5A6A2B"],
+    "foto": { "w": 1404, "h": 1439, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "e-melhor-ser-alegre-ii",
+    "titulo": "É melhor ser alegre II",
+    "dim": [100, 99],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#5A6A2B", "#3A1A4A", "#12308F"],
+    "foto": { "w": 1424, "h": 1439, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "memorias-iv",
+    "titulo": "Memórias IV",
+    "dim": [100, 41],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#F7F4EC", "#C9A24B", "#3A1A4A"],
+    "foto": { "w": 419, "h": 1030, "ext": "webp" }
+  },
+  {
+    "id": "sentimento",
+    "titulo": "Sentimento",
+    "dim": [100, 152],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#C42A1D", "#C9A24B", "#5A6A2B"],
+    "foto": { "w": 598, "h": 392, "ext": "webp" }
+  },
+  {
+    "id": "sem-titulo-5",
+    "titulo": "Sem título",
+    "dim": [100, 176],
+    "semMedida": true,
+    "status": "vendida",
+    "diptico": true,
+    "paleta": ["#C42A1D", "#F7F4EC", "#C9A24B"],
+    "foto": { "w": 1076, "h": 612, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "sem-titulo-6",
+    "titulo": "Sem título",
+    "dim": [100, 170],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#C9A24B", "#5A6A2B", "#F7F4EC"],
+    "foto": { "w": 678, "h": 400, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "invente-novos-caminhos",
+    "titulo": "Invente novos caminhos",
+    "dim": [100, 100],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#F7F4EC", "#5A6A2B", "#12308F"],
+    "foto": { "w": 1080, "h": 1080, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "luz-do-sol",
+    "titulo": "Luz do Sol",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2016,
+    "dim": [130, 220],
+    "status": "vendida",
+    "paleta": ["#C9A24B", "#C42A1D", "#F7F4EC"],
+    "foto": { "w": 956, "h": 556, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "profeta",
+    "titulo": "Profeta",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2019,
+    "dim": [120, 150],
+    "status": "vendida",
+    "paleta": ["#3A1A4A", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 749, "h": 761, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "esquecer",
+    "titulo": "Esquecer",
+    "dim": [100, 98],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#5A6A2B", "#C9A24B", "#F7F4EC"],
+    "foto": { "w": 418, "h": 411, "ext": "webp" }
+  },
+  {
+    "id": "fundo-do-mar",
+    "titulo": "Fundo do mar",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2019,
+    "dim": [110, 220],
+    "status": "vendida",
+    "paleta": ["#12308F", "#3A1A4A", "#5A6A2B"],
+    "foto": { "w": 1080, "h": 1066, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "mandacaru",
+    "titulo": "Mandacaru",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2015,
+    "dim": [140, 320],
+    "status": "vendida",
+    "paleta": ["#5A6A2B", "#C42A1D", "#C9A24B"],
+    "foto": { "w": 1080, "h": 608, "ext": "webp", "mini": true }
+  },
+  {
+    "id": "sem-titulo-8",
+    "titulo": "Sem título",
+    "dim": [100, 75],
+    "semMedida": true,
+    "status": "vendida",
+    "paleta": ["#F7F4EC", "#3A1A4A", "#C9A24B"],
+    "foto": { "w": 920, "h": 1228, "ext": "webp", "mini": true }
+  }
+]

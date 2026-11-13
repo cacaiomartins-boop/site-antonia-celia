@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Obra, links, medidaTexto } from "../data/clinic";
+import { Obra, fotoUrl, links, medidaTexto } from "../data/clinic";
 import { TLink } from "./Transicao";
 import { telaProvisoria } from "../lib/placeholder";
 import { parar, seguir } from "../lib/scroll";
@@ -36,7 +36,7 @@ export default function Sala({ obra, fechar }: { obra: Obra; fechar: () => void 
         <div className="flex justify-center">
           {foto ? (
             <img
-              src={`/img/obras/${obra.id}.webp`}
+              src={fotoUrl(obra)}
               alt={[obra.titulo, obra.tecnica?.toLowerCase(), obra.ano].filter(Boolean).join(", ")}
               onError={() => setFoto(false)}
               draggable={false}
@@ -58,7 +58,7 @@ export default function Sala({ obra, fechar }: { obra: Obra; fechar: () => void 
                 {obra.tecnica && <><dt className="text-gesso/60">Técnica</dt><dd className="m-0">{obra.tecnica}</dd></>}
                 {!obra.semMedida && <><dt className="text-gesso/60">Medida</dt><dd className="m-0">{medidaTexto(obra.dim)}</dd></>}
                 {obra.ano && <><dt className="text-gesso/60">Ano</dt><dd className="m-0">{obra.ano}</dd></>}
-                {obra.preco && <><dt className="text-gesso/60">Valor</dt><dd className="m-0 font-bold">{obra.preco}</dd></>}
+                {obra.status === "disponivel" && obra.preco && <><dt className="text-gesso/60">Valor</dt><dd className="m-0 font-bold">{obra.preco}</dd></>}
               </dl>
               {obra.detalhe && <p className="mt-4 italic text-gesso/80">{obra.detalhe}</p>}
 

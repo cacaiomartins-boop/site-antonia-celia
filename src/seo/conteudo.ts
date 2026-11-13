@@ -1,8 +1,8 @@
 // Gera, a partir dos dados do próprio site, o que fica no HTML de cada página para quem não executa JavaScript
 // (robôs de busca e de IA): tags do <head>, dados estruturados (JSON-LD) e uma versão em texto do conteúdo.
 // Só roda no build (scripts/seo.mjs). Nada daqui aparece para quem usa o site normalmente.
-import { artista, curriculo, exposicoes, links, medidaTexto, obras, paginas, textos, type Obra } from "../data/clinic";
-import { NOME, OG_ALT, OG_IMAGEM, SITE, seoNaoEncontrada, seoPaginas, urlDe } from "./site";
+import { artista, curriculo, exposicoes, fotoUrl, links, medidaTexto, obras, paginas, textos, type Obra } from "../data/clinic";
+import { NOME, OG_ALT, OG_IMAGEM, SITE, seoNaoEncontrada, seoPaginas, seoPainel, urlDe } from "./site";
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const json = (o: unknown) => JSON.stringify(o).replace(/</g, "\\u003c");
@@ -12,7 +12,7 @@ const TELEFONE = `+${artista.whatsapp.slice(0, 2)} ${artista.whatsapp.slice(2, 4
 const PESSOA = `${SITE}/#antonia-celia`;
 const SITE_ID = `${SITE}/#site`;
 
-const foto = (id: string) => `${SITE}/img/obras/${id}.webp`;
+const foto = (o: Obra) => `${SITE}${fotoUrl(o)}`;
 const preco = (o: Obra) => {
   const m = o.preco?.match(/R\$\s*([\d.]+),(\d{2})/);
   return m ? `${m[1].replace(/\./g, "")}.${m[2]}` : null;
@@ -48,7 +48,7 @@ const site = () => ({
 const obraLd = (o: Obra, comOferta: boolean) => ({
   "@type": "VisualArtwork",
   name: o.titulo,
-  image: foto(o.id),
+  image: foto(o),
   creator: { "@id": PESSOA },
   ...(o.tecnica ? { artMedium: o.tecnica } : {}),
   ...(o.ano ? { dateCreated: String(o.ano) } : {}),
@@ -125,6 +125,13 @@ export function headDe(rota: string): string {
     `<meta name="twitter:description" content="${esc(seo.descricao)}" />`,
     `<meta name="twitter:image" content="${OG_IMAGEM}" />`,
     `<script type="application/ld+json">${json({ "@context": "https://schema.org", "@graph": grafo(rota) })}</script>`,
+  ].join("\n    ");
+}
+
+export function headPainel(): string {
+  return [
+    `<title>${esc(seoPainel.titulo)}</title>`,
+    `<meta name="robots" content="noindex, nofollow" />`,
   ].join("\n    ");
 }
 

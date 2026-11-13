@@ -28,6 +28,8 @@ for (const rota of c.rotas) {
   await mkdir(pasta, { recursive: true });
   await writeFile(join(pasta, "index.html"), html);
 }
+await mkdir(join(dist, "admin"), { recursive: true });
+await writeFile(join(dist, "admin", "index.html"), montar(c.headPainel(), ""));
 await writeFile(join(dist, "404.html"), montar(c.headNaoEncontrada(), c.semJavascriptNaoEncontrada()));
 await writeFile(join(dist, "sitemap.xml"), c.sitemap());
 console.log(`SEO: ${c.rotas.length} páginas, 404.html e sitemap.xml gerados em ${dist}/`);

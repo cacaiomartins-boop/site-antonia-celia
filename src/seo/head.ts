@@ -1,4 +1,4 @@
-import { OG_IMAGEM, seoNaoEncontrada, seoPaginas, urlDe } from "./site";
+import { OG_IMAGEM, seoNaoEncontrada, seoPaginas, seoPainel, urlDe } from "./site";
 
 function meta(attr: "name" | "property", chave: string, valor: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${chave}"]`);
@@ -12,6 +12,12 @@ function meta(attr: "name" | "property", chave: string, valor: string) {
 
 // Mantém título, descrição, endereço canônico e tags de compartilhamento certos quando a pessoa navega pelo site.
 export function aplicarSeo(rota: string) {
+  if (rota === "/admin") {
+    document.title = seoPainel.titulo;
+    meta("name", "robots", "noindex, nofollow");
+    document.head.querySelector('link[rel="canonical"]')?.remove();
+    return;
+  }
   const p = seoPaginas.find((x) => x.rota === rota);
   const dados = p ?? seoNaoEncontrada;
   document.title = dados.titulo;
