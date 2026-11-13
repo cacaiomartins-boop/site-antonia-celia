@@ -10,7 +10,8 @@ const Exposicoes = lazy(() => import("./pages/Exposicoes"));
 const Disponiveis = lazy(() => import("./pages/Disponiveis"));
 const Vendidas = lazy(() => import("./pages/Vendidas"));
 const Contato = lazy(() => import("./pages/Contato"));
-import { artista, paginas } from "./data/clinic";
+import NaoEncontrada from "./pages/NaoEncontrada";
+import { aplicarSeo } from "./seo/head";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -18,8 +19,7 @@ export default function App() {
   useEffect(() => { iniciarScroll(); }, []);
 
   useEffect(() => {
-    const p = paginas.find((x) => x.rota === pathname);
-    document.title = p ? `${p.nome} · ${artista.nome}, artista plástica` : `${artista.nome} · Artista plástica em ${artista.cidade}`;
+    aplicarSeo(pathname);
     const t = setTimeout(() => ScrollTrigger.refresh(), 150);
     return () => clearTimeout(t);
   }, [pathname]);
@@ -28,7 +28,7 @@ export default function App() {
     <TransicaoProvider>
       <Cabecalho />
       <main>
-        <Suspense fallback={<div className="min-h-[80svh]" />}>
+        <Suspense fallback={<div className="min-h-[300svh]" />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quem-sou" element={<QuemSou />} />
@@ -36,7 +36,7 @@ export default function App() {
           <Route path="/disponiveis" element={<Disponiveis />} />
           <Route path="/vendidas" element={<Vendidas />} />
           <Route path="/contato" element={<Contato />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NaoEncontrada />} />
         </Routes>
         </Suspense>
       </main>

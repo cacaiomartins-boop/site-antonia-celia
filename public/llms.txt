@@ -1,0 +1,12 @@
+# Antônia Célia
+
+> Site oficial de Antônia Célia, artista plástica de Brasília. Pintura abstrata em telas de grande formato, com obras disponíveis, histórico de exposições no Brasil e no exterior e encomendas sob medida.
+
+## Páginas
+
+- [Início](https://www.antoniacelia.com/): apresentação da artista.
+- [Quem sou](https://www.antoniacelia.com/quem-sou): biografia, séries, reconhecimentos e críticas sobre a obra.
+- [Exposições](https://www.antoniacelia.com/exposicoes): exposições desde 1993, mapa e currículo completo.
+- [Disponíveis](https://www.antoniacelia.com/disponiveis): telas à venda, com técnica, medida e valor.
+- [Vendidas](https://www.antoniacelia.com/vendidas): obras que já encontraram casa.
+- [Contato](https://www.antoniacelia.com/contato): WhatsApp, e-mail e como encomendar ou reservar uma tela.

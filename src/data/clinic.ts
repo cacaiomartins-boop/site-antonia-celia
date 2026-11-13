@@ -1,6 +1,6 @@
 // ============================================================
 // TODOS OS DADOS DO SITE FICAM AQUI (textos, obras, exposições, contato).
-// Para trocar uma foto: coloque o arquivo em public/img/obras/<id>.jpg
+// Para trocar uma foto: coloque o arquivo em public/img/obras/<id>.webp
 // (o <id> é o campo "id" de cada obra abaixo). Sem arquivo, aparece
 // uma tela pintada provisória.
 // ============================================================
@@ -14,7 +14,6 @@ export const artista = {
   whatsapp: "5561999849850", // 55 + DDD + número
   whatsappConfirmado: true,
   email: "antonia_celia@hotmail.com", // do catálogo impresso; confirmar com a artista
-  retrato: "/img/antonia.jpg", // foto dela (opcional; sem arquivo aparece uma moldura pintada)
 };
 
 export const cores = {
@@ -30,11 +29,11 @@ export const cores = {
 
 // Cada página tem a cor de uma tela dela
 export const paginas = [
-  { rota: "/quem-sou", nome: "Quem sou", img: "/img/paginas/quem-sou.jpg", cor: cores.vermelhao, frase: "A mulher por trás dos gestos" },
-  { rota: "/exposicoes", nome: "Exposições", img: "/img/paginas/exposicoes.jpg", cor: cores.azul, frase: "De Brasília para o mundo" },
-  { rota: "/disponiveis", nome: "Disponíveis", img: "/img/paginas/disponiveis.jpg", cor: cores.laranja, frase: "Telas esperando uma parede" },
-  { rota: "/vendidas", nome: "Vendidas", img: "/img/paginas/vendidas.jpg", cor: cores.beringela, frase: "Telas que já encontraram casa" },
-  { rota: "/contato", nome: "Contato", img: "/img/paginas/contato.jpg", cor: cores.ouro, frase: "Vamos conversar sobre uma tela?" },
+  { rota: "/quem-sou", nome: "Quem sou", img: "/img/paginas/quem-sou.webp", cor: cores.vermelhao, frase: "A mulher por trás dos gestos" },
+  { rota: "/exposicoes", nome: "Exposições", img: "/img/paginas/exposicoes.webp", cor: cores.azul, frase: "De Brasília para o mundo" },
+  { rota: "/disponiveis", nome: "Disponíveis", img: "/img/paginas/disponiveis.webp", cor: cores.laranja, frase: "Telas esperando uma parede" },
+  { rota: "/vendidas", nome: "Vendidas", img: "/img/paginas/vendidas.webp", cor: cores.beringela, frase: "Telas que já encontraram casa" },
+  { rota: "/contato", nome: "Contato", img: "/img/paginas/contato.webp", cor: cores.ouro, frase: "Vamos conversar sobre uma tela?" },
 ];
 
 export const textos = {
@@ -366,7 +365,7 @@ export const curriculo: { individuais: Linha[]; coletivas: Linha[] } = {
 // status "aguardando" = ainda sem confirmação (vendida ou acervo): fica escondida do site
 // até a artista mandar a lista de vendidas e de acervo.
 // "dim" = [altura, largura] em cm (tela deitada: a segunda é maior). Em dípticos, é o conjunto.
-// Fotos: public/img/obras/<id>.jpg (sem foto, aparece uma tela provisória).
+// Fotos: public/img/obras/<id>.webp (sem foto, aparece uma tela provisória).
 // ---------------------------------------------------------------
 export type Obra = {
   id: string;
@@ -445,18 +444,17 @@ export const obras: Obra[] = [
   { id: "o-tempo", titulo: "O tempo", dim: [100, 191], status: "vendida", paleta: [B, G, V], semMedida: true },
   { id: "memorias", titulo: "Memórias", tecnica: ACR, dim: [100, 120], ano: 2026, status: "vendida", paleta: [A, W, G] },
   { id: "um-azul-tao-profundo", titulo: "Um azul tão profundo que hipnotiza", dim: [100, 172], status: "vendida", paleta: [A, A, G], semMedida: true },
-  { id: "sem-titulo", titulo: "Sem título", dim: [100, 164], status: "vendida", paleta: [G, W, O], semMedida: true, detalhe: "Dois trípticos, vistos instalados." },
+  { id: "serie-infinito", titulo: "Série Infinito", dim: [100, 164], status: "vendida", paleta: [G, W, O], semMedida: true, detalhe: "Dois trípticos, vistos instalados." },
   { id: "ceu-de-estrelas", titulo: "Céu de estrelas", tecnica: ACR, dim: [130, 220], ano: 2025, status: "vendida", paleta: [A, W, A] },
   { id: "livre-expressao", titulo: "Livre expressão", tecnica: ACR, dim: [135, 230], ano: 2025, status: "vendida", paleta: [A, V, G] },
-  { id: "sem-titulo-2", titulo: "Sem título", dim: [100, 178], status: "vendida", paleta: [B, G, V], semMedida: true },
+  { id: "tons-do-mar", titulo: "Tons do mar", dim: [100, 178], status: "vendida", paleta: [B, G, V], semMedida: true },
   { id: "amar", titulo: "Amar", tecnica: ACR, dim: [200, 90], ano: 2022, status: "vendida", paleta: [V, B, W] },
   { id: "azul-da-cor-do-mar", titulo: "Azul da cor do mar", tecnica: ACR, dim: [120, 100], ano: 2020, status: "vendida", paleta: [A, W, A] },
   { id: "memorias-diptico", titulo: "Memórias", dim: [100, 175], status: "vendida", paleta: [W, G, B], semMedida: true, diptico: true },
   { id: "caminho-ii", titulo: "Caminho II", dim: [100, 100], status: "vendida", paleta: [O, W, V], semMedida: true },
   { id: "agua", titulo: "Água", tecnica: "Mista sobre tela", dim: [110, 135], ano: 2020, status: "vendida", paleta: [A, O, W] },
-  { id: "sem-titulo-3", titulo: "Sem título", dim: [100, 116], status: "vendida", paleta: [A, B, W], semMedida: true },
+  { id: "azul-da-cor-do-mar-2", titulo: "Azul da cor do mar", dim: [100, 116], status: "vendida", paleta: [A, B, W], semMedida: true },
   { id: "silencio-e-luz", titulo: "Silêncio e luz", tecnica: ACR, dim: [130, 220], ano: 2019, status: "vendida", paleta: [W, G, O] },
-  { id: "sem-titulo-4", titulo: "Sem título", dim: [100, 78], status: "vendida", paleta: [B, W, G], semMedida: true },
   { id: "e-melhor-ser-alegre-i", titulo: "É melhor ser alegre I", dim: [100, 98], status: "vendida", paleta: [B, G, O], semMedida: true },
   { id: "e-melhor-ser-alegre-ii", titulo: "É melhor ser alegre II", dim: [100, 99], status: "vendida", paleta: [O, B, A], semMedida: true },
   { id: "memorias-iv", titulo: "Memórias IV", dim: [100, 41], status: "vendida", paleta: [W, G, B], semMedida: true },
@@ -467,17 +465,9 @@ export const obras: Obra[] = [
   { id: "luz-do-sol", titulo: "Luz do Sol", tecnica: ACR, dim: [130, 220], ano: 2016, status: "vendida", paleta: [G, V, W] },
   { id: "profeta", titulo: "Profeta", tecnica: ACR, dim: [120, 150], ano: 2019, status: "vendida", paleta: [B, G, W] },
   { id: "esquecer", titulo: "Esquecer", dim: [100, 98], status: "vendida", paleta: [O, G, W], semMedida: true },
-  { id: "sem-titulo-7", titulo: "Sem título", dim: [100, 101], status: "vendida", paleta: [A, B, W], semMedida: true },
+  { id: "fundo-do-mar", titulo: "Fundo do mar", tecnica: ACR, dim: [110, 220], ano: 2019, status: "vendida", paleta: [A, B, O] },
   { id: "mandacaru", titulo: "Mandacaru", tecnica: ACR, dim: [140, 320], ano: 2015, status: "vendida", paleta: [O, V, G] },
   { id: "sem-titulo-8", titulo: "Sem título", dim: [100, 75], status: "vendida", paleta: [W, B, G], semMedida: true },
-];
-
-// Fotos de telas nos ambientes dos clientes (Instagram: "especialmente para esta sala")
-export const ambientes = [
-  { id: "sala-sofa", legenda: "Tela de 1,20 × 2,20 m sobre o sofá", cor: G },
-  { id: "sala-jantar", legenda: "Vermelhão na sala de jantar", cor: V },
-  { id: "corredor", legenda: "Verde-oliva no corredor", cor: O },
-  { id: "living-arquiteta", legenda: "Living da arquiteta Rachel Fechina", cor: A },
 ];
 
 export const links = {

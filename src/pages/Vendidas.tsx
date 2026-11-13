@@ -38,9 +38,9 @@ export default function Vendidas() {
           <p className="m-0 max-w-sm text-lg italic">Clique em uma tela para vê-la ampliada.</p>
         </div>
         <ul className="m-0 mt-14 list-none columns-2 gap-x-5 p-0 sm:gap-x-12 lg:columns-3">
-          {vendidas.map((o) => (
+          {vendidas.map((o, i) => (
             <li key={o.id} className="mb-10 break-inside-avoid md:mb-14">
-              <Quadro obra={o} selo onClick={() => setAberta(o)} />
+              <Quadro obra={o} selo prioridade={i < 4} onClick={() => setAberta(o)} />
               <p className="m-0 mt-1 text-[0.85rem] italic leading-snug text-tinta/65 md:text-[0.95rem]">
                 {[o.tecnica, !o.semMedida && medidaTexto(o.dim)].filter(Boolean).join(" · ")}
               </p>

@@ -38,6 +38,7 @@ export default function Cabecalho() {
         id="menu-mobile"
         className={`fixed inset-0 z-[65] grid grid-rows-5 pt-[3.4rem] transition-[clip-path] duration-500 md:hidden ${aberto ? "[clip-path:inset(0_0_0_0)]" : "[clip-path:inset(0_0_100%_0)]"}`}
         aria-hidden={!aberto}
+        {...(aberto ? {} : { inert: "" })}
       >
         {paginas.map((p) => (
           <TLink

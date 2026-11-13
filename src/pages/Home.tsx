@@ -38,7 +38,7 @@ function Corredor() {
           {destaques.map((o) => (
             <div key={o.id} className="shrink-0">
               <TLink to="/disponiveis" className="block no-underline">
-                <Quadro obra={o} altura="clamp(250px,50svh,620px)" inclinar />
+                <Quadro obra={o} altura="clamp(250px,50svh,620px)" inclinar tamanhos="(min-width: 768px) 55vw, 90vw" />
               </TLink>
             </div>
           ))}

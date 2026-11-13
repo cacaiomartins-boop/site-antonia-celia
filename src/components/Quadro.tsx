@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import type { Obra } from "../data/clinic";
 import { telaProvisoria } from "../lib/placeholder";
+import { larguras, proporcoes } from "../data/proporcoes";
 
 type Props = {
   obra: Obra;
@@ -11,11 +12,13 @@ type Props = {
   inclinar?: boolean;
   altura?: string; // ex.: "62vh" (largura sai da proporção)
   legenda?: boolean;
+  prioridade?: boolean; // foto acima da dobra: carrega já, sem esperar rolar
+  tamanhos?: string; // largura que a tela ocupa na página (para o navegador escolher a foto)
 };
 
 // Uma tela pendurada: foto real se existir, tela provisória se não.
-export default function Quadro({ obra, className = "", onClick, selo, inclinar = true, altura, legenda = true }: Props) {
-  const [proporcao, setProporcao] = useState(obra.dim[1] / obra.dim[0]); // largura / altura (provisório até a foto carregar)
+export default function Quadro({ obra, className = "", onClick, selo, inclinar = true, altura, legenda = true, prioridade = false, tamanhos = "(min-width: 1024px) 33vw, 50vw" }: Props) {
+  const [proporcao, setProporcao] = useState(proporcoes[obra.id] ?? obra.dim[1] / obra.dim[0]); // largura / altura
   const [foto, setFoto] = useState(true);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -61,9 +64,11 @@ export default function Quadro({ obra, className = "", onClick, selo, inclinar =
         >
           {foto && (
             <img
-              src={`/img/obras/${obra.id}.jpg`}
+              src={`/img/obras/${obra.id}.webp`}
+              {...((larguras[obra.id] ?? 0) > 640 ? { srcSet: `/img/obras/${obra.id}-640.webp 640w, /img/obras/${obra.id}.webp ${larguras[obra.id]}w`, sizes: tamanhos } : {})}
               alt={[obra.titulo, obra.tecnica?.toLowerCase(), obra.ano].filter(Boolean).join(", ")}
-              loading="lazy"
+              loading={prioridade ? "eager" : "lazy"}
+              {...(prioridade ? { fetchpriority: "high" } : {})}
               draggable={false}
               className="block h-full w-full object-cover"
               onLoad={(e) => {

@@ -1,12 +1,9 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { gsap, reduzido } from "../lib/scroll";
 import PaginaTopo from "../components/PaginaTopo";
 import Palavras from "../components/Palavras";
-import FotoAmbiente from "../components/FotoAmbiente";
 import { TLink } from "../components/Transicao";
-import { ambientes, artista, cores, paginas, textos } from "../data/clinic";
-
-// só mostra as fotos de ambiente que já existem em public/img/ambientes/
+import { artista, cores, paginas, textos } from "../data/clinic";
 
 const cor = paginas[0].cor;
 const ciclo = [cores.vermelhao, cores.oliva, cores.azul, cores.beringela, cores.ouro];
@@ -43,22 +40,13 @@ function Assinatura() {
 
 export default function QuemSou() {
   const [sobre, setSobre] = useState<number | null>(null);
-  const [fotos, setFotos] = useState<string[]>([]);
-  useEffect(() => {
-    ambientes.forEach((a) => {
-      const i = new Image();
-      i.onload = () => setFotos((f) => (f.includes(a.id) ? f : [...f, a.id]));
-      i.src = `/img/ambientes/${a.id}.jpg`;
-    });
-  }, []);
-  const visiveis = ambientes.filter((a) => fotos.includes(a.id));
   return (
     <>
       <PaginaTopo titulo="Quem sou" frase={paginas[0].frase} cor={cor} imagem={paginas[0].img} />
 
       <section className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:px-9 md:py-36">
         <figure className="m-0 md:sticky md:top-24 md:self-start">
-          <img src="/img/antonia-sala.jpg" alt="Antônia Célia sentada no sofá, diante de uma de suas telas" width={685} height={725} className="block w-full shadow-[0_24px_40px_-22px_rgba(22,19,15,.6)]" />
+          <img src="/img/antonia-sala.webp" alt="Antônia Célia sentada no sofá, diante de uma de suas telas" width={685} height={725} className="block w-full shadow-[0_24px_40px_-22px_rgba(22,19,15,.6)]" />
           <figcaption className="mt-3 text-[0.95rem] italic text-tinta/70">{artista.nomeCompleto}, diante de uma de suas telas</figcaption>
         </figure>
         <div className="space-y-10">
@@ -92,20 +80,6 @@ export default function QuemSou() {
           ))}
         </ul>
       </section>
-
-      {visiveis.length > 0 && (
-      <section className="bg-tinta px-5 py-24 text-gesso md:px-9 md:py-32" aria-labelledby="amb">
-        <div className="mx-auto max-w-[1400px]">
-          <h2 id="amb" className="m-0 max-w-3xl text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold">Telas na parede de outras casas</h2>
-          <p className="mt-5 max-w-xl text-xl italic text-gesso/80">{textos.encomenda}</p>
-          <div className="mt-14 grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-8">
-            {visiveis.map((a, i) => (
-              <FotoAmbiente key={a.id} id={a.id} legenda={a.legenda} className={i % 2 ? "md:mt-16" : ""} />
-            ))}
-          </div>
-        </div>
-      </section>
-      )}
 
       <section className="mx-auto max-w-[1400px] px-5 pt-24 md:px-9" aria-labelledby="crit">
         <h2 id="crit" className="m-0 text-[clamp(2.2rem,5vw,4.4rem)] font-extrabold">O que dizem sobre as telas</h2>

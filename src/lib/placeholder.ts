@@ -1,7 +1,7 @@
 import type { Obra } from "../data/clinic";
 
 // Tela provisória só com CSS (leve): fundo na cor da obra + faixas, para quando
-// ainda não existe a foto real em public/img/obras/<id>.jpg
+// ainda não existe a foto real em public/img/obras/<id>.webp
 function semente(s: string) {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619);

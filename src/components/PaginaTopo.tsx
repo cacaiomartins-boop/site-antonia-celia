@@ -23,6 +23,8 @@ export default function PaginaTopo({ titulo, frase, cor, imagem, escuro = false 
         <img
           src={imagem}
           alt=""
+          decoding="async"
+          {...{ fetchpriority: "high" }}
           className="topo-quadro absolute right-5 top-[5.2rem] h-[27svh] max-w-[calc(100vw-2.5rem)] rotate-[1.5deg] object-cover shadow-[0_22px_40px_-16px_rgba(0,0,0,.55)] md:right-9 md:top-[6.5rem] md:h-[min(40svh,22rem)] md:max-w-[52vw]"
         />
       )}

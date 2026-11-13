@@ -102,7 +102,7 @@ export default function TelaViva() {
     <section ref={secao} className="relative h-[100svh] min-h-[540px] overflow-hidden bg-gesso" style={{ touchAction: "pan-y", cursor: cursorPincel(cor) }}>
       <canvas ref={canvas} className="absolute inset-0 h-full w-full" aria-hidden />
 
-      <div className="pointer-events-none absolute inset-x-0 top-[38%] -translate-y-1/2 px-5 text-center">
+      <div className="pointer-events-none absolute inset-x-0 top-[38%] -translate-y-1/2 px-5 text-center md:top-[42%]">
         <h1 className="m-0 leading-none" aria-label={`${artista.nome}, ${artista.funcao}`}>
           <span
             ref={assinatura}

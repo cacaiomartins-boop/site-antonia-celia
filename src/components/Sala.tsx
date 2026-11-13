@@ -36,7 +36,7 @@ export default function Sala({ obra, fechar }: { obra: Obra; fechar: () => void 
         <div className="flex justify-center">
           {foto ? (
             <img
-              src={`/img/obras/${obra.id}.jpg`}
+              src={`/img/obras/${obra.id}.webp`}
               alt={[obra.titulo, obra.tecnica?.toLowerCase(), obra.ano].filter(Boolean).join(", ")}
               onError={() => setFoto(false)}
               draggable={false}
