@@ -1,5 +1,18 @@
 [
   {
+    "id": "brasilidade-i-ii-iii",
+    "titulo": "Brasilidade I, II, III",
+    "tecnica": "Acrílico sobre tela",
+    "ano": 2026,
+    "dim": [160, 360],
+    "status": "disponivel",
+    "preco": "R$ 40.000,00",
+    "diptico": true,
+    "detalhe": "Um tríptico, cada tela com 160x120cm",
+    "paleta": ["#998452", "#913d1e", "#7c6550"],
+    "foto": { "w": 1600, "h": 706, "ext": "jpg", "mini": true }
+  },
+  {
     "id": "caminhos-iv",
     "titulo": "Caminhos IV",
     "dim": [120, 220],
