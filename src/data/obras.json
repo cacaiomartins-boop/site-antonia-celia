@@ -265,8 +265,8 @@
     "dim": [110, 210],
     "status": "disponivel",
     "preco": "R$ 16.200,00",
-    "paleta": ["#5A6A2B", "#C9A24B", "#F7F4EC"],
-    "foto": { "w": 1494, "h": 677, "ext": "webp", "mini": true }
+    "paleta": ["#b0afaa", "#c2c0bf", "#938b85"],
+    "foto": { "w": 1600, "h": 813, "ext": "jpg", "mini": true }
   },
   {
     "id": "lembrando",
